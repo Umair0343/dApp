@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Election Results</title>
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container" style="max-width: 650px;">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center">Election Results</h1>
+        <hr>
+        <div id="loader" class="text-center my-4">
+          <p>Loading...</p>
+        </div>
+        <div id="content" style="display: none;">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Votes</th>
+              </tr>
+            </thead>
+            <tbody id="candidatesResults"></tbody>
+          </table>
+          <hr>
+          <form id="voteForm" class="text-center">
+            <div class="form-group">
+              <label for="candidateSelect">Select Candidate</label>
+              <select class="form-control" id="candidateSelect">
+                <!-- Candidates will be loaded here dynamically -->
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Vote</button>
+          </form>
+          <hr>
+          <p id="accountAddress" class="text-center mt-3"></p>
+          <p id="votingTime" class="text-center"></p> <!-- New element for voting time -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
